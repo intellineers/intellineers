@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+def intermediateView(request):
+    context = {}
+    return render(request, 'intermediateViewHTML.html', context)
