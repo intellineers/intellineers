@@ -1,10 +1,19 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Intellineers GmbH & Co. KG</title>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
 </head>
 <body>
-    Welcome to the Intellineers GmbH & Co. KG Site.
+    <div id="wrapper" style="width:100%; text-align:center">
+        <img id="logo" src="{% static 'img/logo.jpg' %}" />
+    </div>
+
+    <div id="footer" style="width:100%; text-align:center">
+        Intellineers GmbH & Co. KG - Erlenkamp 22 - 22087 Hamburg, Germany - +49 40 74393350 - info@intellineers.com - Amtsgericht Hamburg: HRA 119624
+    </div>
 </body>
 </html>
