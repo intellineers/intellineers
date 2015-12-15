@@ -28,7 +28,7 @@ else:
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '2r&on-j(=c-s(=w=1f=rm52tqp07tjb$f&-pfk$p&n*0v#lr_w'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.herokuapp.com','.intellineers.com']
 
 
 # Application definition
