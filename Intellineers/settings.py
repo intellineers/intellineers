@@ -30,17 +30,21 @@ SECRET_KEY = '2r&on-j(=c-s(=w=1f=rm52tqp07tjb$f&-pfk$p&n*0v#lr_w'
 
 ALLOWED_HOSTS = ['.herokuapp.com','.intellineers.com']
 
-
 # Application definition
-
 INSTALLED_APPS = [
+    #django apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    #intellineers apps
     'website',
+
+    #3rd-party apps
+    'sekizai',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -68,6 +72,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'sekizai.context_processors.sekizai',
             ],
         },
     },

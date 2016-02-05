@@ -1,0 +1,171 @@
+{% load staticfiles sekizai_tags %}
+
+{% addtoblock "css" %}
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800' rel='stylesheet' type='text/css'>
+<link href="{% static 'css/style.css' %}" rel="stylesheet" />
+{% endaddtoblock %}
+
+{% addtoblock "js_init" %}
+<script src="{% static 'js/jquery-2.2.0.min.js' %}" language="javascript"></script>
+<script src="{% static 'js/bootstrap.min.js' %}" language="javascript"></script>
+{% endaddtoblock %}
+
+{% addtoblock "js_script" %}
+<script type="text/javascript">
+    function scrollToAnchor(aid){
+        var aTag = $("a[name='"+ aid +"']");
+        $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+    }
+</script>
+{% endaddtoblock %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Intellineers GmbH &amp; Co. KG</title>
+    {% render_block "css" %}
+    {% render_block "js_init" %}
+</head>
+<body>
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar icon-bar-blue"></span>
+                    <span class="icon-bar icon-bar-blue"></span>
+                    <span class="icon-bar icon-bar-blue"></span>
+                </button>
+                <a class="navbar-brand hidden-xs hidden-sm" href="#"><img src="{% static 'img/icons/regular/logo_white_stripe.png' %}" /></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav pull-right">
+                    <li><a onclick="scrollToAnchor('anchor_contact');" class="menuitem">Contact</a></li>
+                    <li><a onclick="scrollToAnchor('anchor_service');" class="menuitem">Offer</a></li>
+                    <li><a onclick="scrollToAnchor('anchor_team');" class="menuitem">The Team</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="header_image" class="container-fluid" style="background-image: url({% static 'img/background/18_white_1900_1328_80p.jpg' %}); background-size: cover; background-position: center center;">
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12" style="text-align: center;">
+                        <img src="{% static 'img/icons/regular/Logo_big.png' %}" style="margin-top: 50px;" />
+                    </div>
+                </div>
+                <div class="row front-row">
+                    <div class="col-lg-12" style="text-align: center;">
+                            A quote that is your motto. You can write more text if<br />you want to further explain what you all do.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12" style="text-align: center;">
+                        <a onclick="scrollToAnchor('anchor_service');" style="position: absolute; margin-top: 15px; left: 50%; margin-left: -38px; line-height: 82px;"><img src="{% static 'img/icons/regular/Slide_down_button_BIG.png' %}"/></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="anchor_service"></a>
+    <div id="services" class="container-fluid">
+        <div class="row" style="min-height: 250px">
+            <div class="container">
+                <div class="row front-row">
+                    <div class="col-lg-12" style="text-align: center;">
+                        <h1>SERVICES WE OFFER</h1>
+                    </div>
+                </div>
+                <div class="row front-row">
+                    <div class="col-lg-4" style="text-align: center;">
+                        <img src="{% static 'img/icons/regular/icon_webservice_BIG.png' %}" />
+                        <h3>Webservice</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac mattis ligula, non semper neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi finibus auctor tortor at ornare. Cum sociis natoque penatibus et magnis dis parturient montes.
+                        </p>
+                    </div>
+                    <div class="col-lg-4" style="text-align: center;">
+                        <img src="{% static 'img/icons/regular/icon_IT_solutions_BIG.png' %}" />
+                        <h3>IT-Solutions</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac mattis ligula, non semper neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi finibus auctor tortor at ornare. Cum sociis natoque penatibus et magnis dis parturient montes.
+                        </p>
+                    </div>
+                    <div class="col-lg-4" style="text-align: center;">
+                        <img src="{% static 'img/icons/regular/icon_AI_BIG.png' %}" />
+                        <h3>NLP Software</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac mattis ligula, non semper neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi finibus auctor tortor at ornare. Cum sociis natoque penatibus et magnis dis parturient montes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="anchor_team"></a>
+    <div id="team" class="container-fluid" style="background-image: url({% static 'img/background/18_dark_1900_1328_80p.jpg' %}); background-size: cover; background-position: center center;">
+        <div class="row" style="min-height: 250px">
+            <div class="container">
+                <div class="row front-row">
+                    <div class="col-lg-12" style="text-align: center;">
+                        <h1 class="text-inverse">OUR TEAM</h1>
+                    </div>
+                </div>
+                <div class="row front-row">
+                    <div class="col-lg-6" style="text-align: center;">
+                        <img src="{% static 'img/icons/regular/photo_Chris_BIG.png' %}" />
+                        <h3 class="text-inverse">Christopher Wittlinger</h3>
+                        <p class="text-inverse">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac mattis ligula, non semper neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi finibus auctor tortor at ornare. Cum sociis natoque penatibus et magnis dis parturient montes.
+                        </p>
+                    </div>
+                    <div class="col-lg-6" style="text-align: center;">
+                        <img src="{% static 'img/icons/regular/photo_Chris2_BIG.png' %}" />
+                        <h3 class="text-inverse">Christoph Sinhart</h3>
+                        <p class="text-inverse">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac mattis ligula, non semper neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi finibus auctor tortor at ornare. Cum sociis natoque penatibus et magnis dis parturient montes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="anchor_contact"></a>
+    <div id="contact" class="container-fluid">
+        <div class="row" style="min-height: 250px">
+            <div class="container">
+                <div class="row front-row">
+                    <div class="col-lg-12" style="text-align: center;">
+                        <h1 class="text-dark">CONTACT</h1>
+                    </div>
+                </div>
+                <div class="row front-row">
+                    <div class="col-lg-12" style="text-align: center;">
+                        <p>
+                            <strong>Intellineers GmbH &amp; Co. KG</strong>
+                        </p>
+                        <p>
+                            Erlenkamp 22<br />
+                            22087 Hamburg<br />
+                            Deutschland
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="bottombar" class="container-fluid">
+        &nbsp;
+    </div>
+    {% render_block "js_script" %}
+</body>
+</html>

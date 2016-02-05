@@ -1,19 +1,79 @@
-body {
+html, body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+a.navbar-brand {
+    height: 92px;
+}
+
+nav.navbar {
     background-color: #010F30;
 }
 
-#logo {
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+h1, h2, h3, h4, h5 {
+    font-weight: 700;
 }
 
-#footer {
-    position: fixed;
-    bottom: 10px;
+h1, h5 {
+    color: rgb(15,124,204);
+}
+
+h2, h3, h4 {
+    color: #010F30;
+}
+
+.navbar-header > button {
+    border: 0px;
+}
+
+.navbar-header > button > span.icon-bar-blue {
+    background-color: white;
+    height: 3px;
+}
+
+.navbar-nav > li > a.menuitem {
+    line-height: 62px;
     color: white;
-    font-family: Arial;
+    font-size: 21px;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+}
+
+.navbar-nav > li > a.menuitem:hover, .navbar-nav > li > a.menuitem:focus {
+    font-weight: 400;
+    background-color: rgb(15,124,204);
+}
+
+.text-inverse {
+    color: white;
+}
+
+.text-dark {
+    color: #010F30;
+}
+
+#header_image {
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+@media (min-width: 992px) {
+#header_image {
+    margin-top: 92px;
+}
+}
+
+#services {
+    padding-top: 75px;
+}
+
+#bottombar {
+    height: 250px;
+    background-color: rgb(15,124,204);
+}
+
+.front-row {
+    margin: 20px 0 50px 0;
 }

@@ -1,19 +1,41 @@
-body {
+html, body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+a.navbar-brand {
+    height: 92px;
+}
+
+nav.navbar {
     background-color: #010F30;
 }
 
-#logo {
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+h1, h2, h3, h4, h5 {
+    font-weight: bold;
 }
 
-#footer {
-    position: fixed;
-    bottom: 10px;
+h1, h5 {
+    color: rgb(15,124,204);
+}
+
+h2, h3, h4 {
+    color: #010F30;
+}
+
+.text-inverse {
     color: white;
-    font-family: Arial;
+}
+
+#header_image {
+    margin-top: 92px;
+    padding-bottom: 50px;
+}
+
+#services {
+    padding-top: 75px;
+}
+
+.front-row {
+    margin: 20px 0 50px 0;
 }

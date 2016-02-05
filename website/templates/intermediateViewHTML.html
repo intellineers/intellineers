@@ -1,4 +1,4 @@
-{% load staticfiles %}
+{% load staticfiles  %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +9,7 @@
 </head>
 <body>
     <div id="wrapper" style="width:100%; text-align:center">
-        <img id="logo" src="{% static 'img/logo.jpg' %}" />
+        <a href="{% url "intermediateView" %}"><img id="logo" src="{% static 'img/logo.jpg' %}" /></a>
     </div>
 
     <div id="footer" style="width:100%; text-align:center">
