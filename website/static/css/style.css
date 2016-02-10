@@ -47,6 +47,10 @@ h2, h3, h4 {
     background-color: rgb(15,124,204);
 }
 
+@media (min-width: 992px) {
+
+}
+
 .text-inverse {
     color: white;
 }
