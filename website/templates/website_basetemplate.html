@@ -1,23 +1,42 @@
 {% load staticfiles sekizai_tags %}
 
 {% addtoblock "css" %}
-<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800' rel='stylesheet' type='text/css'>
-<link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/icons/favicon.ico' %}"/>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800' rel='stylesheet' type='text/css'>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type='text/css'>
+    <link href="{% static 'css/text.css' %}" rel="stylesheet" type='text/css'>
 {% endaddtoblock %}
 
 {% addtoblock "js_init" %}
-<script src="{% static 'js/jquery-2.2.0.min.js' %}" language="javascript"></script>
-<script src="{% static 'js/bootstrap.min.js' %}" language="javascript"></script>
+    <script src="{% static 'js/jquery-2.2.0.min.js' %}" language="javascript"></script>
+    <script src="{% static 'js/jquery.flip.min.js' %}" language="javascript"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}" language="javascript"></script>
 {% endaddtoblock %}
 
 {% addtoblock "js_script" %}
-<script type="text/javascript">
-    function scrollToAnchor(aid){
-        var aTag = $("a[name='"+ aid +"']");
-        $('html,body').animate({scrollTop: aTag.offset().top},'slow');
-    }
-</script>
+    <script type="text/javascript">
+        function scrollToAnchor(aid, collapseMenu) {
+            var aTag = $("a[name='"+ aid +"']");
+            $('html,body').animate({scrollTop: aTag.offset().top},'slow', 'swing', function() {
+                if (collapseMenu == true) {
+                    if ($($(".navbar-header").find("button").get(0)).css("display") !== "none") {
+                        $($(".navbar-header").find("button").get(0)).click();
+                    }
+                }
+            });
+        }
+
+        function toggle_container(container) {
+            $('#service_container').flip('toggle');
+        }
+
+        $(document).ready(function() {
+            $(".flip_init").each(function() {
+                $(this).flip();
+            });
+        });
+    </script>
 {% endaddtoblock %}
 
 <!DOCTYPE html>
@@ -30,6 +49,8 @@
     {% render_block "js_init" %}
 </head>
 <body>
+    <a name="anchor_top" class="anchor"></a>
+
     <nav class="navbar navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -39,19 +60,20 @@
                     <span class="icon-bar icon-bar-blue"></span>
                     <span class="icon-bar icon-bar-blue"></span>
                 </button>
-                <a class="navbar-brand hidden-xs hidden-sm" href="#"><img src="{% static 'img/icons/regular/logo_white_stripe.png' %}" /></a>
+                <a class="navbar-brand hidden-md hidden-lg a_cursor" onclick="scrollToAnchor('anchor_top', false)"><img src="{% static 'img/icons/regular/logo_white.png' %}" /></a>
+                <a class="navbar-brand hidden-xs hidden-sm a_cursor" onclick="scrollToAnchor('anchor_top', false)"><img src="{% static 'img/icons/regular/logo_white_stripe.png' %}" /></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav pull-right">
-                    <li><a onclick="scrollToAnchor('anchor_service');" class="menuitem">{{ services_menuitem }}</a></li>
-                    <li><a onclick="scrollToAnchor('anchor_team');" class="menuitem">{{ team_menuitem }}</a></li>
-                    <li><a onclick="scrollToAnchor('anchor_contact');" class="menuitem">{{ contact_menuitem }}</a></li>
+                    <li><a onclick="scrollToAnchor('anchor_service', true);" class="menuitem a_cursor">{{ services_menuitem }}</a></li>
+                    <li><a onclick="scrollToAnchor('anchor_team', true);" class="menuitem a_cursor">{{ team_menuitem }}</a></li>
+                    <li><a onclick="scrollToAnchor('anchor_contact', true);" class="menuitem a_cursor">{{ contact_menuitem }}</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div id="header_image" class="container-fluid" style="background-image: url({% static 'img/background/18_white_1900_1328_80p.jpg' %}); background-size: cover; background-position: center center;">
+    <div id="header" class="container-fluid" style="background-image: url({% static 'img/background/18_white_1900_1328_80p.jpg' %}); background-size: cover; background-position: center center;">
         <div class="row">
             <div class="container">
                 <div class="row">
@@ -65,51 +87,48 @@
                         </p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-12" style="text-align: center;">
-                        <a onclick="scrollToAnchor('anchor_service');" style="position: absolute; margin-top: 15px; left: 50%; margin-left: -38px; line-height: 82px;"><img src="{% static 'img/icons/regular/Slide_down_button_BIG.png' %}"/></a>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
 
-    <a name="anchor_service"></a>
+    <a name="anchor_service" class="anchor"></a>
+
     <div id="services" class="container-fluid">
-        <div class="row" style="min-height: 250px">
+        <div class="row">
             <div class="container">
                 <div class="row front-row">
                     <div class="col-lg-12" style="text-align: center;">
                         <h1>{{ services_title }}</h1>
                     </div>
                 </div>
-                <div class="row front-row">
-                    <div class="col-lg-3" style="text-align: center;">
-                        <img src="{% static 'img/icons/regular/icon_webservice_BIG.png' %}" />
+                <div id="service_container" class="row front-row">
+                    <div class="col-lg-3 col-md-3" style="text-align: center;">
+                        <img src="{% static 'img/icons/webservice.png' %}" />
                         <h3>{{ web_title }}</h3>
                         <p>
-                            {{ web_content }}
+                            {{ web_content }}<a class="a_cursor" onclick="toggle_container('webservice')">...</a>
                         </p>
                     </div>
-                    <div class="col-lg-3" style="text-align: center;">
-                        <img src="{% static 'img/icons/regular/icon_IT_solutions_BIG.png' %}" />
+                    <div class="col-lg-3 col-md-3" style="text-align: center;">
+                        <img src="{% static 'img/icons/itsolutions.png' %}" />
                         <h3>{{ it_title }}</h3>
                         <p>
-                            {{ it_content }}
+                            {{ it_content }}<a class="a_cursor" onclick="toggle_container('itsolutions')">...</a>
                         </p>
                     </div>
-                    <div class="col-lg-3" style="text-align: center;">
-                        <img src="{% static 'img/icons/regular/icon_NLP_BIG.png' %}" />
+                    <div class="col-lg-3 col-md-3" style="text-align: center;">
+                        <img src="{% static 'img/icons/nlp.png' %}" />
                         <h3>{{ nlp_title }}</h3>
                         <p>
-                            {{ nlp_content }}
+                            {{ nlp_content }}<a class="a_cursor" onclick="toggle_container('nlp')">...</a>
                         </p>
                     </div>
-                    <div class="col-lg-3" style="text-align: center;">
-                        <img src="{% static 'img/icons/regular/icon_AI_BIG.png' %}" />
+                    <div class="col-lg-3 col-md-3" style="text-align: center;">
+                        <img src="{% static 'img/icons/ai.png' %}" />
                         <h3>{{ ai_title }}</h3>
                         <p>
-                            {{ ai_content }}
+                            {{ ai_content }}<a class="a_cursor" onclick="toggle_container('ai')">...</a>
                         </p>
                     </div>
                 </div>
@@ -117,7 +136,8 @@
         </div>
     </div>
 
-    <a name="anchor_team"></a>
+    <a name="anchor_team" class="anchor"></a>
+
     <div id="team" class="container-fluid" style="background-image: url({% static 'img/background/18_dark_1900_1328_80p.jpg' %}); background-size: cover; background-position: center center;">
         <div class="row" style="min-height: 250px">
             <div class="container">
@@ -126,7 +146,7 @@
                         <h1 class="text-inverse">{{ team_title }}</h1>
                     </div>
                 </div>
-                <div class="row front-row">
+                <div id="team_container" class="row front-row">
                     <div class="col-lg-6" style="text-align: center;">
                         <img src="{% static 'img/icons/regular/photo_Chris_BIG.png' %}" />
                         <h3 class="text-inverse">Christopher Wittlinger</h3>
@@ -146,9 +166,10 @@
         </div>
     </div>
 
-    <a name="anchor_contact"></a>
+    <a name="anchor_contact" class="anchor"></a>
+
     <div id="contact" class="container-fluid">
-        <div class="row" style="min-height: 250px">
+        <div class="row">
             <div class="container">
                 <div class="row front-row">
                     <div class="col-lg-12" style="text-align: center;">
@@ -158,6 +179,11 @@
                 <div class="row front-row">
                     <div class="col-lg-12" style="text-align: center;">
                         <p>
+                            <a href="https://plus.google.com/118376646937141269187/about" target="new"><img class="sm_logo" src="{% static 'img/icons/gp_logo.png' %}" /></a>
+                            <img class="sm_logo" src="{% static 'img/icons/fb_logo.png' %}" />
+                            <img class="sm_logo" src="{% static 'img/icons/ln_logo.png' %}" />
+                        </p>
+                        <p>
                             <strong>Intellineers GmbH &amp; Co. KG</strong>
                         </p>
                         <p>
@@ -165,13 +191,25 @@
                             22087 Hamburg<br />
                             Deutschland
                         </p>
+                        <p>
+                            <img src="{% static 'img/icons/mail.png' %}" />
+                        </p>
+                        <p>
+                            <a href="mailto:info@intelineers.com">info@intellineers.com</a>
+                        </p>
+                        <p>
+                            <a href="tel:+494074393350"><img src="{% static 'img/icons/phone.png' %}" /></a>
+                        </p>
+                        <p>
+                            <a href="tel:+494074393350">+49 (40)-743 93 35 0</a>
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div id="bottombar" class="container-fluid">
-        {{ langteststring }}
+
     </div>
     {% render_block "js_script" %}
 </body>

@@ -4,24 +4,51 @@ html, body {
     font-weight: 300;
 }
 
-a.navbar-brand {
-    height: 92px;
+/* --- GENERAL --- */
+
+.a_cursor:hover {
+    cursor:pointer;
+}
+
+.anchor {
+    display: block;
+    position: relative;
+    visibility: hidden;
+}
+
+@media (max-width: 767px) {
+    .anchor {
+        top: -50px;
+    }
+}
+
+@media (min-width: 768px) {
+    .anchor {
+        top: -91px;
+    }
+}
+
+/* --- MENUBAR --- */
+
+/* Height: Menubar Small: 51px */
+/* Height: Menubar Big: 92px */
+
+@media (max-width: 767px) {
+    a.navbar-brand > img {
+        height: 31px;
+    }
+
+    a.navbar-brand {
+        padding-top: 10px;
+    }
+
+    .menuitem {
+        text-align: right;
+    }
 }
 
 nav.navbar {
     background-color: #010F30;
-}
-
-h1, h2, h3, h4, h5 {
-    font-weight: 700;
-}
-
-h1, h5 {
-    color: rgb(15,124,204);
-}
-
-h2, h3, h4 {
-    color: #010F30;
 }
 
 .navbar-header > button {
@@ -35,47 +62,78 @@ h2, h3, h4 {
 
 .navbar-nav > li > a.menuitem {
     line-height: 62px;
-    color: white;
-    font-size: 21px;
-    font-weight: 300;
-    font-family: 'Open Sans', sans-serif;
-    cursor: pointer;
 }
 
 .navbar-nav > li > a.menuitem:hover, .navbar-nav > li > a.menuitem:focus {
-    font-weight: 400;
     background-color: rgb(15,124,204);
 }
 
-@media (min-width: 992px) {
+/* --- HEADER --- */
 
-}
-
-.text-inverse {
-    color: white;
-}
-
-.text-dark {
-    color: #010F30;
-}
-
-#header_image {
-    margin-top: 50px;
+#header {
     padding-bottom: 50px;
 }
-@media (min-width: 992px) {
-#header_image {
-    margin-top: 92px;
-}
+
+@media (max-width: 767px) {
+    #header {
+        margin-top: 41px;
+    }
 }
 
-#services {
-    padding-top: 75px;
+@media (min-width: 768px) {
+    #header {
+        margin-top: 92px;
+    }
 }
+
+/* --- SERVICES --- */
+
+@media (max-width: 991px) {
+    #service_container > div {
+        padding-bottom: 50px;
+    }
+}
+
+/* --- TEAM --- */
+
+@media (max-width: 991px) {
+    #team_container > div {
+        padding-bottom: 50px;
+    }
+}
+
+/* --- CONTACT --- */
+
+@media (max-width: 991px) {
+    img.sm_logo {
+        width: 34px;
+        height: 34px;
+    }
+}
+
+@media (min-width: 992px) {
+    img.sm_logo {
+        width: 48px;
+        height: 48px;
+
+    }
+}
+/* --- FOOTER --- */
 
 #bottombar {
-    height: 250px;
     background-color: rgb(15,124,204);
+}
+
+@media (max-width: 991px) {
+    #bottombar {
+        height: 80px;
+    }
+}
+
+@media (min-width: 992px) {
+    #bottombar {
+        height: 145px;
+    }
 }
 
 .front-row {

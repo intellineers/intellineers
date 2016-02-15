@@ -1,5 +1,18 @@
-body {
-    background-color: #010F30;
+/* ----- TEMPORARY CSS FILE FOR THE TEMPORARY WEBSITE -> DELETE WHEN DEV IS FINISHED ----- */
+
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+#background_img {
+    width: 100%;
+    height: 100%;
+    background-image: url(/static/img/background/18_dark_1900_1328_80p.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #logo {

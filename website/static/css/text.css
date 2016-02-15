@@ -1,0 +1,30 @@
+h1, h2, h3, h4, h5 {
+    font-weight: 700;
+}
+
+h1, h5 {
+    color: rgb(15,124,204);
+}
+
+h2, h3, h4 {
+    color: #010F30;
+}
+
+.navbar-nav > li > a.menuitem {
+    color: white;
+    font-size: 21px;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.navbar-nav > li > a.menuitem:hover, .navbar-nav > li > a.menuitem:focus {
+    font-weight: 400;
+}
+
+.text-inverse {
+    color: white;
+}
+
+.text-dark {
+    color: #010F30;
+}
