@@ -2,12 +2,14 @@ html, body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     font-weight: 300;
+    overflow-x: hidden;
 }
 
 /* --- GENERAL --- */
 
 .a_cursor:hover {
     cursor:pointer;
+    text-decoration: none;
 }
 
 .anchor {
@@ -68,6 +70,16 @@ nav.navbar {
     background-color: rgb(15,124,204);
 }
 
+#lang_menu_small {
+    float: right;
+    line-height: 51px;
+    list-style-type: none;
+}
+
+img.lang_icon {
+    width: 25px;
+}
+
 /* --- HEADER --- */
 
 #header {
@@ -88,9 +100,23 @@ nav.navbar {
 
 /* --- SERVICES --- */
 
+#service_detailed_header {
+    text-align: center;
+}
+
 @media (max-width: 991px) {
     #service_container > div {
         padding-bottom: 50px;
+    }
+
+    #service_detailed_body {
+        text-align: center;
+    }
+}
+
+@media (min-width: 992px) {
+    #service_detailed_body {
+        text-align: left;
     }
 }
 

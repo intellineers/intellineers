@@ -1,0 +1,130 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-17 09:35+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: Intellineers/settings.py:126
+msgid "German"
+msgstr "Deutsch"
+
+#: Intellineers/settings.py:127
+msgid "English"
+msgstr "Englisch"
+
+#: website/views.py:24
+msgid "services_menuitem"
+msgstr "Angebot"
+
+#: website/views.py:25
+msgid "services_title"
+msgstr "Was machen wir?"
+
+#: website/views.py:26
+msgid "team_menuitem"
+msgstr "Team"
+
+#: website/views.py:27
+msgid "team_title"
+msgstr "Wer sind wir?"
+
+#: website/views.py:28
+msgid "contact_menuitem"
+msgstr "Kontakt"
+
+#: website/views.py:29
+msgid "contact_title"
+msgstr "Wie erreicht man uns?"
+
+#: website/views.py:31
+msgid "intellineers_quote"
+msgstr ""
+"We are stuck with technology when what we<br />really want is just stuff "
+"that works. - Douglas Adams"
+
+#: website/views.py:33
+msgid "web_title"
+msgstr "Web-Lösungen"
+
+#: website/views.py:34
+msgid "web_content"
+msgstr ""
+
+#: website/views.py:35
+msgid "web_content_detailed"
+msgstr ""
+"<p>Mit individuellen Web-Lösungen erschließen Sie sich das Potential des Web "
+"2.0/3.0. Nutzen Sie die Vorteile die diese Technologien mit sich bringen.</"
+"p><p>Wir helfen Ihnen gerne dabei folgende Dinge zu implementieren:"
+"<ul><li>Ihren modernen und dynamischen Webauftritt (Responsive - Mobile "
+"First)</li></li>Ihre eigene SaaS/Webapp</li></ul></p>"
+
+#: website/views.py:36
+msgid "it_title"
+msgstr "IT-Lösungen"
+
+#: website/views.py:37
+msgid "it_content"
+msgstr ""
+
+#: website/views.py:38
+msgid "it_content_detailed"
+msgstr ""
+"Jede Art von maßgeschneiderter Software. Von kleinem Plugin bis hin zum "
+"eigenständigem Programm."
+
+#: website/views.py:39
+msgid "ai_title"
+msgstr "Künstliche Intelligenz"
+
+#: website/views.py:40
+msgid "ai_content"
+msgstr ""
+
+#: website/views.py:41
+msgid "ai_content_detailed"
+msgstr "Selbstlernende Algorithmen. Big Data. Data Mining. Machine Learning"
+
+#: website/views.py:42
+msgid "nlp_title"
+msgstr "NLP"
+
+#: website/views.py:43
+msgid "nlp_content"
+msgstr ""
+
+#: website/views.py:44
+msgid "nlp_content_detailed"
+msgstr ""
+"Informationen aus Texten ziehen. Eingebunden als Plugin oder eigenständiger "
+"Software."
+
+#: website/views.py:45
+msgid "back_text"
+msgstr "Zurück"
+
+#: website/views.py:47
+msgid "cw_content"
+msgstr "Geschäftsführer<br />Beratung & Konzeption & Entwicklung"
+
+#: website/views.py:48
+msgid "cs_content"
+msgstr "Geschäftsführer<br />Entwicklung & F&E"
+
+#: website/views.py:50
+msgid "more"
+msgstr "Mehr"
