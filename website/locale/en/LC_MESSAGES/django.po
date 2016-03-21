@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-17 09:35+0000\n"
+"POT-Creation-Date: 2016-03-21 12:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -65,59 +65,76 @@ msgstr ""
 
 #: website/views.py:35
 msgid "web_content_detailed"
-msgstr "Mobile First. Websites. Saas. Dynamic. CMS."
+msgstr ""
+"The foundation of every Websolution are technologies basedon the Web "
+"2.0/3.0. Using these technologies result in a lot of potential. We help you "
+"maximizing the utility gained by using these technologies and help "
+"implementing your new Website / SaaS / Webapp using this potential, but also "
+"combining it with your existing software."
 
-#: website/views.py:36
+#: website/views.py:39
 msgid "it_title"
-msgstr "IT-Solutions"
+msgstr "IT-Consulting"
 
-#: website/views.py:37
+#: website/views.py:40
 msgid "it_content"
 msgstr ""
 
-#: website/views.py:38
+#: website/views.py:41
 msgid "it_content_detailed"
 msgstr ""
-"Any kind of taylormade software. From a small plugin upto a whole software."
+"Nowadays, there are many IT-Technologies that give you the edge over your "
+"competitors and provide you with tools to make sure that you are always a "
+"step ahead. We help you to find the ideal solution that provides your "
+"business with the means to tackle the problems of tomorrow."
 
-#: website/views.py:39
+#: website/views.py:42
 msgid "ai_title"
 msgstr "Artificial Intelligence"
 
-#: website/views.py:40
+#: website/views.py:43
 msgid "ai_content"
 msgstr ""
 
-#: website/views.py:41
+#: website/views.py:44
 msgid "ai_content_detailed"
-msgstr "Self-learning algorithms. Big Data. Data Mining. Machine Learning"
+msgstr ""
+"Technologies of tomorrow are based on self-learning and self-evolving "
+"algorithms.We are experts in the field of Artificial Intelligence and are "
+"your partner when it comes to Data Mining or Machine Learning. We help you "
+"with technological means to catapult your company in the technological next "
+"century."
 
-#: website/views.py:42
+#: website/views.py:45
 msgid "nlp_title"
-msgstr "NLP"
+msgstr "NLP - Doculizer (TM)"
 
-#: website/views.py:43
+#: website/views.py:46
 msgid "nlp_content"
 msgstr ""
 
-#: website/views.py:44
+#: website/views.py:47
 msgid "nlp_content_detailed"
 msgstr ""
-"Retrieve Information from Texts. Included as a plugin or self-sustained "
-"Software"
+"The science of Natural Language Processing is to extract information from "
+"text and process these information in order to visualize them. The Doculizer "
+"(TM) framework utilizes this and provides ways to incorporate this in your "
+"existing IT-Portfolio. This yields huge benefits, such as providing "
+"information of unread documents or E-Mails or help to maximize the "
+"efficiency of processes inside your company."
 
-#: website/views.py:45
+#: website/views.py:48
 msgid "back_text"
 msgstr "Back"
 
-#: website/views.py:47
+#: website/views.py:50
 msgid "cw_content"
 msgstr "CEO<br />Consulting & Conceptual Design & Development"
 
-#: website/views.py:48
+#: website/views.py:51
 msgid "cs_content"
 msgstr "CEO<br />Development & R&D"
 
-#: website/views.py:50
+#: website/views.py:53
 msgid "more"
 msgstr "More"

@@ -34,8 +34,6 @@ def basetemplate(request):
     prepareContext(context, 'web_content', _('web_content'))
     prepareContext(context, 'web_content_detailed', _('web_content_detailed'))
 
-    print context['web_content_detailed']
-
     prepareContext(context, 'it_title', _('it_title'))
     prepareContext(context, 'it_content', _('it_content'))
     prepareContext(context, 'it_content_detailed', _('it_content_detailed'))

@@ -6,6 +6,9 @@ staticfiles
 # C extensions
 *.so
 
+# Development Database
+*.sqlite3
+
 # Distribution / packaging
 bin/
 build/

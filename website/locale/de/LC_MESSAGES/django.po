@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-17 09:35+0000\n"
+"POT-Creation-Date: 2016-03-21 12:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -67,64 +67,73 @@ msgstr ""
 #: website/views.py:35
 msgid "web_content_detailed"
 msgstr ""
-"<p>Mit individuellen Web-Lösungen erschließen Sie sich das Potential des Web "
-"2.0/3.0. Nutzen Sie die Vorteile die diese Technologien mit sich bringen.</"
-"p><p>Wir helfen Ihnen gerne dabei folgende Dinge zu implementieren:"
-"<ul><li>Ihren modernen und dynamischen Webauftritt (Responsive - Mobile "
-"First)</li></li>Ihre eigene SaaS/Webapp</li></ul></p>"
+"Mit individuellen Web-Lösungen erschließen Sie sich das Potential des Web "
+"2.0/3.0. Nutzen Sie die Vorteile, die diese Technologien mit sich bringen."
+"Wir helfen Ihnen diese Technologien mit Ihrem Webauftritt / SaaS / Webapp zu "
+"kombinieren und Ihnen den entscheidenen Vorteil zu verschaffen."
 
-#: website/views.py:36
+#: website/views.py:39
 msgid "it_title"
-msgstr "IT-Lösungen"
+msgstr "IT-Beratung"
 
-#: website/views.py:37
+#: website/views.py:40
 msgid "it_content"
 msgstr ""
 
-#: website/views.py:38
+#: website/views.py:41
 msgid "it_content_detailed"
 msgstr ""
-"Jede Art von maßgeschneiderter Software. Von kleinem Plugin bis hin zum "
-"eigenständigem Programm."
+"Heutzutage bringen IT-Technologien den entscheidenen Vorteil und geben Ihnen "
+"Werkzeuge mit denen Sie der Konkurrenz einen Schritt vorraus sind. Wir "
+"helfen. Ihnen die richtigen Entscheidungen im technologischem Zeitalter zu "
+"treffen und auf die richtige, zukunfstorientierte IT-Strategie zu setzten."
 
-#: website/views.py:39
+#: website/views.py:42
 msgid "ai_title"
 msgstr "Künstliche Intelligenz"
 
-#: website/views.py:40
+#: website/views.py:43
 msgid "ai_content"
 msgstr ""
 
-#: website/views.py:41
+#: website/views.py:44
 msgid "ai_content_detailed"
-msgstr "Selbstlernende Algorithmen. Big Data. Data Mining. Machine Learning"
+msgstr ""
+"Die Technologien von morgen basieren auf selbstlernende Algorithmen. Egal ob "
+"Machine Learning, oder Data Mining, wir sind Experten in diesem Feld und "
+"stehen Ihnen tatkräftig zur Seite, wenn es darum geht Ihr Unternehmen auf "
+"die technologischen Ansprüche von morgen vorzubereiten."
 
-#: website/views.py:42
+#: website/views.py:45
 msgid "nlp_title"
-msgstr "NLP"
+msgstr "NLP - Doculizer (TM)"
 
-#: website/views.py:43
+#: website/views.py:46
 msgid "nlp_content"
 msgstr ""
 
-#: website/views.py:44
+#: website/views.py:47
 msgid "nlp_content_detailed"
 msgstr ""
-"Informationen aus Texten ziehen. Eingebunden als Plugin oder eigenständiger "
-"Software."
+"Natural Language Processing ist die Wissenschaft Informationen aus Texten zu "
+"ziehen und den Inhalt zu visualisieren. Dabei kann ein großer Vorteil "
+"generiert werden, da nicht jedes Dokument gelesen werden muss, um es zu "
+"verstehen. Unser Doculizer (TM) Framework hilft Ihnen Dokumente zu "
+"verschlagworten, E-Mails zu analysieren und Prozesse in Ihrem Unternehmen zu "
+"beschleunigen."
 
-#: website/views.py:45
+#: website/views.py:48
 msgid "back_text"
 msgstr "Zurück"
 
-#: website/views.py:47
+#: website/views.py:50
 msgid "cw_content"
 msgstr "Geschäftsführer<br />Beratung & Konzeption & Entwicklung"
 
-#: website/views.py:48
+#: website/views.py:51
 msgid "cs_content"
 msgstr "Geschäftsführer<br />Entwicklung & F&E"
 
-#: website/views.py:50
+#: website/views.py:53
 msgid "more"
 msgstr "Mehr"
