@@ -18,7 +18,7 @@ from django.utils.translation import ugettext_lazy as _
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ON_HEROKU = os.environ.get('ON_HEROKU')
 
-if ON_HEROKU:
+if ON_HEROKU == 'True':
     DEBUG = False
 else:
     DEBUG = True
