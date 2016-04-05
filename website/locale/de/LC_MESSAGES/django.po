@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-21 12:42+0000\n"
+"POT-Creation-Date: 2016-04-05 11:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -67,73 +67,89 @@ msgstr ""
 #: website/views.py:35
 msgid "web_content_detailed"
 msgstr ""
-"Mit individuellen Web-Lösungen erschließen Sie sich das Potential des Web "
-"2.0/3.0. Nutzen Sie die Vorteile, die diese Technologien mit sich bringen."
-"Wir helfen Ihnen diese Technologien mit Ihrem Webauftritt / SaaS / Webapp zu "
-"kombinieren und Ihnen den entscheidenen Vorteil zu verschaffen."
+"Individuellen Web-Lösungen sind der Schlüssel zum Erschließen der "
+"Technologien, die das Web 3.0 bereit stellen wird. Web 3.0 beschreibt die "
+"Weiterentwicklung des Webs (2.0) und bezieht sich unter anderem auf die "
+"Verbreitung von Internet-basierten Diensten und Technologien wie Data-Mining "
+"und Natural Language Processing. Nutzen Sie die Vorteile, die z.B. die "
+"Digitalisierung des Büros mit sich bringt. Wir helfen Ihnen die neuen "
+"Technologien, die Ihnen mit Softwarelösungen wie ERP, DMS, und co. zur "
+"Verfügung stehen, mit Ihrem Webauftritt / SaaS / Webapp zu kombinieren und "
+"Ihnen den entscheidenen Vorteil zu verschaffen."
 
-#: website/views.py:39
+#: website/views.py:37
 msgid "it_title"
 msgstr "IT-Beratung"
 
-#: website/views.py:40
+#: website/views.py:38
 msgid "it_content"
 msgstr ""
 
-#: website/views.py:41
+#: website/views.py:39
 msgid "it_content_detailed"
 msgstr ""
 "Heutzutage bringen IT-Technologien den entscheidenen Vorteil und geben Ihnen "
-"Werkzeuge mit denen Sie der Konkurrenz einen Schritt vorraus sind. Wir "
-"helfen. Ihnen die richtigen Entscheidungen im technologischem Zeitalter zu "
-"treffen und auf die richtige, zukunfstorientierte IT-Strategie zu setzten."
+"Werkzeuge mit denen Sie der Konkurrenz einen Schritt vorraus sein können. "
+"Damit dies gelingt, müssen verschiedene Technologien ineinander greifen und "
+"zusammenarbeiten. Wir helfen Ihnen die richtigen Entscheidungen im "
+"technologischem Zeitalter zu treffen und auf die richtige, "
+"zukunfstorientierte IT-Strategie zu setzten."
 
-#: website/views.py:42
+#: website/views.py:40
 msgid "ai_title"
 msgstr "Künstliche Intelligenz"
 
-#: website/views.py:43
+#: website/views.py:41
 msgid "ai_content"
 msgstr ""
 
-#: website/views.py:44
+#: website/views.py:42
 msgid "ai_content_detailed"
 msgstr ""
-"Die Technologien von morgen basieren auf selbstlernende Algorithmen. Egal ob "
-"Machine Learning, oder Data Mining, wir sind Experten in diesem Feld und "
-"stehen Ihnen tatkräftig zur Seite, wenn es darum geht Ihr Unternehmen auf "
-"die technologischen Ansprüche von morgen vorzubereiten."
+"Die Technologien von morgen basieren auf selbstlernenden Algorithmen. "
+"Zunehmend mehr Geschäftsentscheidungen werden durch künstliche Intelligenz "
+"unterstützt, welche mit der Zeit lernt und sich selbst verbessert. Data "
+"Mining Algorithmen extrahieren informationen aus großen Datensätzen, die für "
+"Ihr Unternehmen von Nutzen sein können. Zusätzlich können diese "
+"Informationen als Grundlage für die Verbesserung von selbstlernenden "
+"Algorithmen genutzt werden. Wir sind Experten in Machine Learning und Data "
+"Mining. Wir stehen Ihnen tatkräftig zur Seite, wenn es darum geht Ihr "
+"Unternehmen auf die technologischen Ansprüche von morgen vorzubereiten."
 
-#: website/views.py:45
+#: website/views.py:43
 msgid "nlp_title"
 msgstr "NLP - Doculizer (TM)"
 
-#: website/views.py:46
+#: website/views.py:44
 msgid "nlp_content"
 msgstr ""
 
-#: website/views.py:47
+#: website/views.py:45
 msgid "nlp_content_detailed"
 msgstr ""
-"Natural Language Processing ist die Wissenschaft Informationen aus Texten zu "
-"ziehen und den Inhalt zu visualisieren. Dabei kann ein großer Vorteil "
-"generiert werden, da nicht jedes Dokument gelesen werden muss, um es zu "
-"verstehen. Unser Doculizer (TM) Framework hilft Ihnen Dokumente zu "
-"verschlagworten, E-Mails zu analysieren und Prozesse in Ihrem Unternehmen zu "
-"beschleunigen."
+"Natural Language Processing, kurz NLP, ist die Wissenschaft Informationen "
+"aus Texten zu extrahieren und den Inhalt zu visualisieren. Dabei kann ein "
+"großer Vorteil generiert werden, da nicht jedes Dokument von Menschen "
+"gelesen werden muss, um die darin enthaltenen Informationen zu erlangen. "
+"Unser Doculizer (TM) Framework hilft Ihnen Dokumente zu verschlagworten, E-"
+"Mails zu analysieren und Prozesse in Ihrem Unternehmen zu beschleunigen. "
+"Doculizer kann mit bereits bestehenden IT-Infrastrukturen genutzt werden, "
+"sofern entsprechende Schnittstellen vorliegen. Wir beraten Sie gerne und "
+"helfen Ihnen dabei herauszufinden, ob Ihre Software diese Schnittstellen zur "
+"Verfügung stellt."
 
-#: website/views.py:48
+#: website/views.py:46
 msgid "back_text"
 msgstr "Zurück"
 
-#: website/views.py:50
+#: website/views.py:48
 msgid "cw_content"
 msgstr "Geschäftsführer<br />Beratung & Konzeption & Entwicklung"
 
-#: website/views.py:51
+#: website/views.py:49
 msgid "cs_content"
 msgstr "Geschäftsführer<br />Entwicklung & F&E"
 
-#: website/views.py:53
+#: website/views.py:51
 msgid "more"
 msgstr "Mehr"

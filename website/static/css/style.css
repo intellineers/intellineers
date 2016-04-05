@@ -12,6 +12,10 @@ html, body {
     text-decoration: none;
 }
 
+a.bright-link {
+    color: #99DFFD;
+}
+
 .anchor {
     display: block;
     position: relative;
