@@ -98,7 +98,7 @@
                     <li class="hidden-xs" class="dropdown">
                         <a href="#" class="dropdown-toggle menuitem" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="{% static 'img/icons/'|add:current_lang|add:'.jpg' %}" class="lang_icon" /><span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="/{{ other_lang }}/base"><img src="{% static 'img/icons/'|add:other_lang|add:'.jpg' %}" class="lang_icon" /></a></li>
+                            <li><a href="{% url 'basetemplate' %}"><img src="{% static 'img/icons/'|add:other_lang|add:'.jpg' %}" class="lang_icon" /></a></li>
                         </ul>
                     </li>
                 </ul>
