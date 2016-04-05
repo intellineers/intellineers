@@ -29,21 +29,21 @@
 
         function slide_left(service) {
             if (service === 'web') {
-                $("#inj_img").attr('src', '{{ article_1.icon_2_url }}');
-                $('#inj_h3').text("{{ article_1.title }}");
-                $('#inj_p').text("{{ article_1.content }}");
+                $("#inj_img").attr('src', '{% static 'img/icons/webservice.png' %}');
+                $('#inj_h3').text("{{ web_title }}");
+                $('#inj_p').text("{% trans web_content_detailed %}");
             } else if (service === 'itsolution') {
-                $("#inj_img").attr('src', '{{ article_2.icon_2_url }}');
-                $('#inj_h3').text("{{ article_2.title }}");
-                $('#inj_p').text("{{ article_2.content }}");
+                $("#inj_img").attr('src', '{% static 'img/icons/itsolutions.png' %}');
+                $('#inj_h3').text("{{ it_title }}");
+                $('#inj_p').text("{{ it_content_detailed }}");
             } else if (service === 'nlp') {
-                $("#inj_img").attr('src', '{{ article_3.icon_2_url }}');
-                $('#inj_h3').text("{{ article_3.title }}");
-                $('#inj_p').text("{{ article_3.content }}");
+                $("#inj_img").attr('src', '{% static 'img/icons/nlp.png' %}');
+                $('#inj_h3').text("{{ nlp_title }}");
+                $('#inj_p').text("{{ nlp_content_detailed }}");
             } else if (service === 'ai') {
-                $("#inj_img").attr('src', '{{ article_4.icon_2_url }}');
-                $('#inj_h3').text("{{ article_4.title }}");
-                $('#inj_p').text("{{ article_4.content }}");
+                $("#inj_img").attr('src', '{% static 'img/icons/ai.png' %}');
+                $('#inj_h3').text("{{ ai_title }}");
+                $('#inj_p').text("{{ ai_content_detailed }}");
             }
             $("#services").animate({'margin-left': '-100%'});
         }
@@ -138,29 +138,29 @@
                     </div>
                     <div id="service_container" class="row front-row">
                         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 a_cursor" style="text-align: center;" onclick="slide_left('web');">
-                            <img src="{{ article_1.icon_1_url }}" />
-                            <h3>{{ article_1.title }}</h3>
+                            <img src="{% static 'img/icons/webservice.png' %}" />
+                            <h3>{{ web_title }}</h3>
                             <p>
                                 <a class="a_cursor">{{ more }}</a>
                             </p>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 a_cursor" style="text-align: center;" onclick="slide_left('itsolution');">
-                            <img src="{{ article_2.icon_1_url }}" />
-                            <h3>{{ article_2.title }}</h3>
+                            <img src="{% static 'img/icons/itsolutions.png' %}" />
+                            <h3>{{ it_title }}</h3>
                             <p>
                                 <a class="a_cursor">{{ more }}</a>
                             </p>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 a_cursor" style="text-align: center;" onclick="slide_left('nlp');">
-                            <img src="{{ article_3.icon_1_url }}" />
-                            <h3>{{ article_3.title }}</h3>
+                            <img src="{% static 'img/icons/nlp.png' %}" />
+                            <h3>{{ nlp_title }}</h3>
                             <p>
                                 <a class="a_cursor">{{ more }}</a>
                             </p>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 a_cursor" style="text-align: center;" onclick="slide_left('ai');">
-                            <img src="{{ article_4.icon_1_url }}" />
-                            <h3>{{ article_4.title }}</h3>
+                            <img src="{% static 'img/icons/ai.png' %}" />
+                            <h3>{{ ai_title }}</h3>
                             <p>
                                 <a class="a_cursor">{{ more }}</a>
                             </p>

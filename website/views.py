@@ -5,6 +5,8 @@ from django.utils.translation import ugettext as _
 from django.utils.translation import activate
 from django.utils.translation import LANGUAGE_SESSION_KEY
 
+from models import Article
+
 def intermediateView(request):
     context = {}
     return render(request, 'intermediateViewHTML.html', context)
@@ -30,20 +32,37 @@ def basetemplate(request):
 
     prepareContext(context, 'intellineers_quote', _('intellineers_quote'))
 
-    prepareContext(context, 'web_title', _('web_title'))
-    prepareContext(context, 'web_content', _('web_content'))
-    prepareContext(context, 'web_content_detailed', _('web_content_detailed'))
+    # NOTE: Loading the articles is hardcoded. It may be changed later.
+    if context['current_lang'] == 'en':
+        context['article_1'] = Article.objects.get(title='Web-Solutions')
+        context['article_2'] = Article.objects.get(title='IT-Consulting')
+        context['article_3'] = Article.objects.get(title='NLP - Doculizer (TM)', language='en')
+        context['article_4'] = Article.objects.get(title='Artificial Intelligence')
 
-    prepareContext(context, 'it_title', _('it_title'))
-    prepareContext(context, 'it_content', _('it_content'))
-    prepareContext(context, 'it_content_detailed', _('it_content_detailed'))
-    prepareContext(context, 'ai_title', _('ai_title'))
-    prepareContext(context, 'ai_content', _('ai_content'))
-    prepareContext(context, 'ai_content_detailed', _('ai_content_detailed'))
-    prepareContext(context, 'nlp_title', _('nlp_title'))
-    prepareContext(context, 'nlp_content', _('nlp_content'))
-    prepareContext(context, 'nlp_content_detailed', _('nlp_content_detailed'))
+    if context['current_lang'] == 'de':
+        context['article_1'] = Article.objects.get(slug='web-loesungen')
+        context['article_2'] = Article.objects.get(title='IT-Beratung')
+        context['article_3'] = Article.objects.get(title='NLP - Doculizer (TM)', language='de')
+        context['article_4'] = Article.objects.get(slug='kuenstliche-intelligenz')
+
+    # prepareContext(context, 'web_title', _('web_title'))
+    # prepareContext(context, 'web_content', _('web_content'))
+    # prepareContext(context, 'web_content_detailed', _('web_content_detailed'))
+
+    # prepareContext(context, 'it_title', _('it_title'))
+    # prepareContext(context, 'it_content', _('it_content'))
+    # prepareContext(context, 'it_content_detailed', _('it_content_detailed'))
+
+    # prepareContext(context, 'ai_title', _('ai_title'))
+    # prepareContext(context, 'ai_content', _('ai_content'))
+    # prepareContext(context, 'ai_content_detailed', _('ai_content_detailed'))
+
+    # prepareContext(context, 'nlp_title', _('nlp_title'))
+    # prepareContext(context, 'nlp_content', _('nlp_content'))
+    # prepareContext(context, 'nlp_content_detailed', _('nlp_content_detailed'))
+
     prepareContext(context, 'back_text', _('back_text'))
+
 
     prepareContext(context, 'cw_content', _('cw_content'))
     prepareContext(context, 'cs_content', _('cs_content'))
