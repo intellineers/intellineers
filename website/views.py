@@ -18,6 +18,7 @@ def basetemplate(request):
         context['current_lang'] = 'en'
         request.session[LANGUAGE_SESSION_KEY] = 'en'
         context['other_lang'] = 'de'
+        
     else:
         context['current_lang'] = 'de'
         request.session[LANGUAGE_SESSION_KEY] = 'de'

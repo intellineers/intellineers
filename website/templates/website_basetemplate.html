@@ -143,9 +143,9 @@
                     <span class="icon-bar icon-bar-blue"></span>
                 </button>
                 <div id="lang_menu_small" class="dropdown hidden-lg hidden-md hidden-sm">
-                    <a href="#" class="dropdown-toggle menuitem" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="{% static 'img/icons/'|add:current_lang|add:'.jpg' %}" class="lang_icon"/><span class="caret"></span></a>
+                    <a class="dropdown-toggle menuitem" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="{% static 'img/icons/'|add:current_lang|add:'.jpg' %}" class="lang_icon"/><span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="{% url 'basetemplate' %}"><img src="{% static 'img/icons/'|add:other_lang|add:'.jpg' %}" class="lang_icon" /></a></li>
+                        <li><a href="/{{ other_lang }}/"><img src="{% static 'img/icons/'|add:other_lang|add:'.jpg' %}" class="lang_icon" /></a></li>
                     </ul>
                 </div>
                 <a class="navbar-brand hidden-md hidden-lg a_cursor" onclick="scrollToAnchor('anchor_top', false)"><img src="{% static 'img/icons/regular/logo_white.png' %}" /></a>
@@ -159,7 +159,7 @@
                     <li class="hidden-xs" class="dropdown">
                         <a href="#" class="dropdown-toggle menuitem" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="{% static 'img/icons/'|add:current_lang|add:'.jpg' %}" class="lang_icon" /><span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="{% url 'basetemplate' %}"><img src="{% static 'img/icons/'|add:other_lang|add:'.jpg' %}" class="lang_icon" /></a></li>
+                            <li><a href="/{{ other_lang }}/"><img src="{% static 'img/icons/'|add:other_lang|add:'.jpg' %}" class="lang_icon" /></a></li>
                         </ul>
                     </li>
                 </ul>
