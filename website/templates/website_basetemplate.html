@@ -27,36 +27,97 @@
             });
         }
 
-        function slide_left(service) {
+        function set_details(service) {
             if (service === 'web') {
                 $("#inj_img").attr('src', '{{ article_1.icon_2_url }}');
                 $('#inj_h3').text("{{ article_1.title }}");
                 $('#inj_p').text("{{ article_1.content }}");
+
             } else if (service === 'itsolution') {
                 $("#inj_img").attr('src', '{{ article_2.icon_2_url }}');
                 $('#inj_h3').text("{{ article_2.title }}");
                 $('#inj_p').text("{{ article_2.content }}");
+
             } else if (service === 'nlp') {
                 $("#inj_img").attr('src', '{{ article_3.icon_2_url }}');
                 $('#inj_h3').text("{{ article_3.title }}");
                 $('#inj_p').text("{{ article_3.content }}");
+
             } else if (service === 'ai') {
                 $("#inj_img").attr('src', '{{ article_4.icon_2_url }}');
                 $('#inj_h3').text("{{ article_4.title }}");
                 $('#inj_p').text("{{ article_4.content }}");
             }
-            $("#services").animate({'margin-left': '-100%'});
         }
 
-        function slide_right() {
-            $("#services").animate({'margin-left': '0'});
-        }
 
-        $(document).ready(function() {
-            $(".flip_init").each(function() {
-                $(this).flip();
+        function animateLeft($src) {
+            var $left = $('.swap-container-left');
+            var $right = $('.swap-container-right');
+            var $parent = $left.parent();
+            var width = $left.width();
+
+            set_details($src.data('service'));
+
+            $parent.css('height', $parent.height());
+
+            $left.css({position: 'absolute'});
+            $right.hide().appendTo($parent).css({left: width, position: 'absolute'});
+
+            $left.animate({left : -width}, 500, function(){
+                $left.hide();
+                $left.css({left: null, position: null});
+
+                // Reduce the size of the parent and scroll to the top of this section
+                // after the left container disappeared.
+                // This is to avoid an overlap with the section below.
+                $parent.animate({height: $right.height()}, 250, function() {
+                    $parent.css('height', 'auto');
+                });
+
+                $('html, body').animate({scrollTop: $('a[name="anchor_service"]').offset().top}, 250, function() {});
             });
-        });
+            $right.show().animate({left: 0}, 500, function(){
+                $right.css({left: null, position: 'relative'});
+            });
+        }
+
+        function animateRight() {
+            var $left = $('.swap-container-left');
+            var $right = $('.swap-container-right');
+            var $parent = $right.parent();
+            var width = $right.width();
+            var original_height = $parent.css('height');
+
+            $parent.css('height', $parent.height());
+
+            $right.css({position: 'absolute'});
+            $left.hide().appendTo($parent).css({left: -width, position: 'absolute'});
+
+            $right.animate({left : width}, 500, function(){
+                $right.hide();
+                $right.css({left: null, position: null});
+            });
+            $left.show().animate({left: 0}, 500, function(){
+                $left.css({left: null, position: 'relative'});
+            });
+            $parent.animate({height: $left.height()}, 500, function() {
+                $parent.css('height', 'auto');
+            });
+        }
+
+        $(function() {
+            var $firsts = $(".swap-item-first");
+            // Hide the service detail column.
+            $(".swap-item-second").parents('.swap-container-right').hide();
+
+            $firsts.each(function() {
+                var that = $(this);
+                that.click(function() {
+                    animateLeft(that);
+                });
+            });
+        })
     </script>
 {% endaddtoblock %}
 
@@ -127,9 +188,10 @@
 
     <a name="anchor_service" class="anchor"></a>
 
-    <div id="services" class="container-fluid" style="width:200%;">
+    <!--<div id="services" class="container-fluid" style="width:200%;">-->
+    <div id="services" class="container-fluid">
         <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 swap-container-left">
                 <div class="container">
                     <div class="row front-row">
                         <div class="col-lg-12" style="text-align: center;">
@@ -137,28 +199,28 @@
                         </div>
                     </div>
                     <div id="service_container" class="row front-row">
-                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 a_cursor" style="text-align: center;" onclick="slide_left('web');">
+                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 a_cursor swap-item-first" style="text-align: center;" data-service="web">
                             <img src="{{ article_1.icon_1_url }}" />
                             <h3>{{ article_1.title }}</h3>
                             <p>
                                 <a class="a_cursor">{{ more }}</a>
                             </p>
                         </div>
-                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 a_cursor" style="text-align: center;" onclick="slide_left('itsolution');">
+                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 a_cursor swap-item-first" style="text-align: center;" data-service="itsolution">
                             <img src="{{ article_2.icon_1_url }}" />
                             <h3>{{ article_2.title }}</h3>
                             <p>
                                 <a class="a_cursor">{{ more }}</a>
                             </p>
                         </div>
-                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 a_cursor" style="text-align: center;" onclick="slide_left('nlp');">
+                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 a_cursor swap-item-first" style="text-align: center;" data-service="nlp">
                             <img src="{{ article_3.icon_1_url }}" />
                             <h3>{{ article_3.title }}</h3>
                             <p>
                                 <a class="a_cursor">{{ more }}</a>
                             </p>
                         </div>
-                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 a_cursor" style="text-align: center;" onclick="slide_left('ai');">
+                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 a_cursor swap-item-first" style="text-align: center;" data-service="ai">
                             <img src="{{ article_4.icon_1_url }}" />
                             <h3>{{ article_4.title }}</h3>
                             <p>
@@ -168,15 +230,15 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 swap-container-right">
                 <div class="container">
                     <div class="row front-row">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align: center;">
-                            <a class="a_cursor" onclick="slide_right();"><h1>{{ back_text }}</h1></a>
+                            <a class="a_cursor" onclick="animateRight();"><h1>{{ back_text }}</h1></a>
                         </div>
                     </div>
                     <div id="service_container" class="row front-row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 swap-item-second">
                             <div class="row">
                                 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" id="service_detailed_header">
                                     <img id="inj_img" />
