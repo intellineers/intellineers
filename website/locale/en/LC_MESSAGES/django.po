@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-05 11:41+0000\n"
+"POT-Creation-Date: 2016-05-13 10:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,129 +25,105 @@ msgstr ""
 msgid "English"
 msgstr ""
 
-#: website/views.py:24
+#: website/views.py:27
 msgid "services_menuitem"
 msgstr "Service"
 
-#: website/views.py:25
+#: website/views.py:28
 msgid "services_title"
 msgstr "What are we doing?"
 
-#: website/views.py:26
+#: website/views.py:29
 msgid "team_menuitem"
 msgstr "Team"
 
-#: website/views.py:27
+#: website/views.py:30
 msgid "team_title"
 msgstr "Who are we?"
 
-#: website/views.py:28
+#: website/views.py:31
 msgid "contact_menuitem"
 msgstr "Contact"
 
-#: website/views.py:29
+#: website/views.py:32
 msgid "contact_title"
 msgstr "How to contact us?"
 
-#: website/views.py:31
+#: website/views.py:34
 msgid "intellineers_quote"
 msgstr ""
 "We are stuck with technology when what we<br />really want is just stuff "
 "that works. - Douglas Adams"
 
-#: website/views.py:33
-msgid "web_title"
-msgstr "Web-Solutions"
-
-#: website/views.py:34
-msgid "web_content"
-msgstr ""
-
-#: website/views.py:35
-msgid "web_content_detailed"
-msgstr ""
-"An individual websolution is key to utilize the new technologies that the "
-"Web 3.0 is about to offer. Web 3.0 describes the transition from the Web 2.0 "
-"(the current state) to a more intelligent web, and it makes reference to "
-"technologies like Data-Mining and Natural Language Processing used in "
-"combination with the web. Benefit from a digital office. We will help you to "
-"utilize the technologies that are available to you when using software "
-"solutions like ERP, DMS, etc. by combining them with your website / SaaS / "
-"webapp."
-
-#: website/views.py:37
-msgid "it_title"
-msgstr "IT-Consulting"
-
-#: website/views.py:38
-msgid "it_content"
-msgstr ""
-
-#: website/views.py:39
-msgid "it_content_detailed"
-msgstr ""
-"Nowadays, there are many IT-Technologies that give you the edge over your "
-"competitors and provide you with tools to make sure that you are always a "
-"step ahead. In order to do so, several different software solutions must "
-"work together. We will help you to find the ideal solution that provides "
-"your business with the means to tackle the problems of tomorrow."
-
-#: website/views.py:40
-msgid "ai_title"
-msgstr "Artificial Intelligence"
-
-#: website/views.py:41
-msgid "ai_content"
-msgstr ""
-
-#: website/views.py:42
-msgid "ai_content_detailed"
-msgstr ""
-"Technologies of tomorrow are based on self-learning and self-evolving "
-"algorithms. Increasingly more business decisions are backed by artificial "
-"intelligence, which learns over time and improves itself. Data Mining "
-"algorithms extract information from large datasets. These information can be "
-"of great use to your company. Additionally, these information can be used to "
-"improve self-learning algorithms. We are experts in the field of Artificial "
-"Intelligence and are your partner when it comes to Data Mining or Machine "
-"Learning. We help you with technological means to catapult your company in "
-"the technological next century."
-
-#: website/views.py:43
-msgid "nlp_title"
-msgstr "NLP - Doculizer (TM)"
-
-#: website/views.py:44
-msgid "nlp_content"
-msgstr ""
-
-#: website/views.py:45
-msgid "nlp_content_detailed"
-msgstr ""
-"The science of Natural Language Processing (NLP) is to extract information "
-"from text and process these information in order to visualize them. This "
-"improves the speed in which documents can be analyzed, because not all "
-"documents need to be read by human in order to retrieve information. This "
-"yields huge benefits, such as providing information of unread documents or E-"
-"Mails or help to maximize the efficiency of processes inside your company. "
-"The Doculizer (TM) framework utilizes NLP algorithms and can be incorporated "
-"in your existing IT-Portfolio given the software you use provides a certain "
-"API to do so. We will help you to plan the integration of the Doculizer "
-"framework and to determine, whether the software your company uses provides "
-"the above mentioned API."
-
-#: website/views.py:46
+#: website/views.py:65
 msgid "back_text"
 msgstr "Back"
 
-#: website/views.py:48
+#: website/views.py:68
 msgid "cw_content"
 msgstr "CEO<br />Consulting & Conceptual Design & Development"
 
-#: website/views.py:49
+#: website/views.py:69
 msgid "cs_content"
 msgstr "CEO<br />Development & R&D"
 
-#: website/views.py:51
+#: website/views.py:71
 msgid "more"
 msgstr "More"
+
+#~ msgid "web_title"
+#~ msgstr "Web-Solutions"
+
+#~ msgid "web_content_detailed"
+#~ msgstr ""
+#~ "An individual websolution is key to utilize the new technologies that the "
+#~ "Web 3.0 is about to offer. Web 3.0 describes the transition from the Web "
+#~ "2.0 (the current state) to a more intelligent web, and it makes reference "
+#~ "to technologies like Data-Mining and Natural Language Processing used in "
+#~ "combination with the web. Benefit from a digital office. We will help you "
+#~ "to utilize the technologies that are available to you when using software "
+#~ "solutions like ERP, DMS, etc. by combining them with your website / "
+#~ "SaaS / webapp."
+
+#~ msgid "it_title"
+#~ msgstr "IT-Consulting"
+
+#~ msgid "it_content_detailed"
+#~ msgstr ""
+#~ "Nowadays, there are many IT-Technologies that give you the edge over your "
+#~ "competitors and provide you with tools to make sure that you are always a "
+#~ "step ahead. In order to do so, several different software solutions must "
+#~ "work together. We will help you to find the ideal solution that provides "
+#~ "your business with the means to tackle the problems of tomorrow."
+
+#~ msgid "ai_title"
+#~ msgstr "Artificial Intelligence"
+
+#~ msgid "ai_content_detailed"
+#~ msgstr ""
+#~ "Technologies of tomorrow are based on self-learning and self-evolving "
+#~ "algorithms. Increasingly more business decisions are backed by artificial "
+#~ "intelligence, which learns over time and improves itself. Data Mining "
+#~ "algorithms extract information from large datasets. These information can "
+#~ "be of great use to your company. Additionally, these information can be "
+#~ "used to improve self-learning algorithms. We are experts in the field of "
+#~ "Artificial Intelligence and are your partner when it comes to Data Mining "
+#~ "or Machine Learning. We help you with technological means to catapult "
+#~ "your company in the technological next century."
+
+#~ msgid "nlp_title"
+#~ msgstr "NLP - Doculizer (TM)"
+
+#~ msgid "nlp_content_detailed"
+#~ msgstr ""
+#~ "The science of Natural Language Processing (NLP) is to extract "
+#~ "information from text and process these information in order to visualize "
+#~ "them. This improves the speed in which documents can be analyzed, because "
+#~ "not all documents need to be read by human in order to retrieve "
+#~ "information. This yields huge benefits, such as providing information of "
+#~ "unread documents or E-Mails or help to maximize the efficiency of "
+#~ "processes inside your company. The Doculizer (TM) framework utilizes NLP "
+#~ "algorithms and can be incorporated in your existing IT-Portfolio given "
+#~ "the software you use provides a certain API to do so. We will help you to "
+#~ "plan the integration of the Doculizer framework and to determine, whether "
+#~ "the software your company uses provides the above mentioned API."
